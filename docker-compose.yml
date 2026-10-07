@@ -1,16 +1,10 @@
 services:
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    image: fullstack-cicd-frontend:latest
+    image: vorasakshii/fullstack-cicd-frontend:latest
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    image: fullstack-cicd-backend:latest
+    image: vorasakshii/fullstack-cicd-backend:latest
     environment:
       MONGO_URL: mongodb://mongodb:27017/studentdb
     depends_on:
